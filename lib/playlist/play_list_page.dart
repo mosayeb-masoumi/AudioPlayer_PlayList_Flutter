@@ -40,6 +40,29 @@ class _HomePageState extends State<PlayListPage> {
                 "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"))),
   ]);
 
+  // to get data from server
+  // final List<AudioSource> audioSources = [];
+  //
+  // for (int i = 0; i < audioUrls.length; i++) {
+  // final Uri uri = Uri.parse(audioUrls[i]);
+  // final Map<String, String> mediaItem = mediaItems[i];
+  // final AudioSource audioSource = AudioSource.uri(
+  // uri,
+  // tag: MediaItem(
+  // id: mediaItem['id'],
+  // title: mediaItem['title'],
+  // artist: mediaItem['artist'],
+  // artUri: Uri.parse(mediaItem['artUri']),
+  // ),
+  // );
+  // audioSources.add(audioSource);
+  // }
+  //
+  // final _playList = ConcatenatingAudioSource(children: audioSources);
+
+
+
+
   Stream<PositionData> get _positionDataStream =>
       Rx.combineLatest3<Duration, Duration, Duration?, PositionData>(
           _audioPlayer.positionStream,
